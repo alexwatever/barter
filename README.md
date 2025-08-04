@@ -18,7 +18,7 @@ TBC...
 
 ## OANDA Client
 
-The OANDA client is a wrapper around the OANDA v20 API, using the [openapi-generator]() tool and the [OANDA v20 OpenAPI specification](https://github.com/oanda/v20-openapi/blob/master/yaml/v20.yaml).  
+The OANDA client is a wrapper around the OANDA v20 API, using the [openapi-generator](https://github.com/OpenAPITools/openapi-generator) tool and the [OANDA v20 OpenAPI specification](https://github.com/oanda/v20-openapi/blob/master/yaml/v20.yaml).  
 
 **See:** [/oanda_client](oanda_client)  
 
