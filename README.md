@@ -1,7 +1,7 @@
 
 # Barter
 
-This is a collection of tools for trading with the OANDA v20 API.  
+This is a collection of tools for trading with the OANDA v20 API, currently in development.  
 
 ## Barter Bot
 
@@ -11,9 +11,14 @@ A simple trading bot.
 
 ## Usage
 
-```shell
-TBC...
-```
+1. Follow the [OANDA instructions](https://developer.oanda.com/rest-live-v20/introduction/) for generating a personal access token, and save it to `barter/.env`:
+    ```shell
+    echo "OANDA_TOKEN=..." > barter/.env
+    ```
+2. Run the bot:
+    ```shell
+    cargo run
+    ```
 <br>
 
 ## OANDA Client
@@ -26,16 +31,16 @@ The OANDA client is a wrapper around the OANDA v20 API, using the [openapi-gener
 
 The `v20.yaml` file from the official OANDA repository contains a duplicate `operationId` which will cause the client generation to fail. A patch file has been created to fix this.
 
-1.  **Download the latest `v20.yaml` specification:**
+1.  Download the latest `v20.yaml` specification:
     ```shell
     curl -o oanda_client/spec/v20.yaml https://raw.githubusercontent.com/oanda/v20-openapi/master/yaml/v20.yaml
     ```
-2.  **Apply the patch:**
+2.  Apply the patch:
     ```shell
     cp oanda_client/spec/v20.yaml.bak oanda_client/spec/v20.yaml
     patch oanda_client/spec/v20.yaml < oanda_client/spec/v20.patch
     ```
-3.  **Generate the client:**
+3.  Generate the client:
     ```shell
     openapi-generator generate -i ./oanda_client/spec/v20.yaml -g rust -o ./oanda_client --additional-properties=packageName=oanda_client
     ```
