@@ -1,0 +1,11 @@
+--- oanda_client/v20.yaml	2025-08-04 22:18:30
++++ oanda_client/v20.yaml.patched	2025-08-04 22:18:53
+@@ -2171,7 +2171,7 @@
+     get:
+       summary: Get Candlesticks
+       description: Fetch candlestick data for an instrument.
+-      operationId: getInstrumentCandles
++      operationId: getAccountInstrumentCandles
+       parameters:
+       - $ref: '#/parameters/authorizationHeaderParam'
+       - $ref: '#/parameters/acceptDatetimeFormatHeaderParam'

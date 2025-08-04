@@ -1,0 +1,10 @@
+[package]
+name = "barter"
+version = "0.1.0"
+edition = "2024"
+authors = ["Alex Watson <alex@coded.cc>"]
+description = "A simple trading bot using the OANDA v20 API"
+repository = "https://github.com/coded-cc/barter"
+readme = "README.md"
+
+[dependencies]
